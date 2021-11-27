@@ -1,11 +1,15 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
-
+ 
 def all_employee(request): 
-   
-   return render(request, 'all_employee.html')
+   Employee = emplyee.objects.all()
+   context ={
+    "All_employee": Employee,
+   }
+   return render(request, 'all_employee.html', context)
 
 def Profile(request): 
    return render(request, 'profile.html')
