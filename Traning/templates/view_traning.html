@@ -12,22 +12,23 @@
 {% load static %}
     <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
         <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-
+        {% for obj in  traning %}
 
             <div class="col">
-                <div class="card h-100 shadow-sm"> <img src="https://www.dripcoding.com/wp-content/uploads/2021/06/what-is-flutter-1280.png" class="card-img-top" alt="...">
-                     <p>time</P>
+                <div class="card h-100 shadow-sm"> <img src="obj.img.url" class="card-img-top" alt="...">
+                     <p>obj.time</P>
                     <div class="card-body">
-                        <h5 class="card-title mb-3">Advance Flutter Course</h5>
-                        <p>discruption</p>
+                        <h5 class="card-title mb-3">obj.title</h5>
+                        <p>obj.discruption</p>
 
 
                         <br>
-                        <div class="text-center -4my-4"> <a href="#" class="btn btn-warning">Apply</a> </div>
+                        <div class="text-center -4my-4"> <a href="#" class="btn btn-warning">obj.Apply</a> </div>
                     </div>
                 </div>
             </div>
-           
+        {% endfor %}
+   
         </div>
     </div>
 </main>
