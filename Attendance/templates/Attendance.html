@@ -1,0 +1,108 @@
+{% extends 'adminlite/adminlite.html' %}
+{% load static %}
+{% block styles %}
+  {{ block.super }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="card-group">
+    <div class="card p-2 m-3">
+      <div class="card-body">
+          <h3>Timesheet 11 Mar 2019</h3>
+            <div class="callout ">
+              <h6>Punch In at</h5>
+              <p>Wed, 11th Mar 2019 10.00 AM</p>
+            </div>
+
+      </div>
+        
+      
+    </div>
+
+    <div class="card p-2 m-3">
+      <div class="card-body">
+          <h3>Statistics</h3>
+          <div class="row">
+            <td>
+              <div class="progress progress-xs">
+                <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+              </div>
+            </td>
+            
+          </div>
+        </div>
+   
+    </div>
+
+    <div class="card p-2 m-3">
+      <div class="card-body">
+          <h3>Today Activity</h3>
+          <div class="row">
+            
+          </div>
+        </div>
+   
+  </div>  
+
+</div>
+
+<div class="card m-3 p-2">
+
+  <h3>Attendance</h3>
+
+  <table class="table table-hover text-nowrap">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Date</th>
+        <th>Punce In</th>
+        <th>Punch Out</th>
+        <th>Production</th>
+        <th>Break</th>
+        <th>Overtime</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>11-7-2021</td>
+        <td>10 AM</td>
+        <td>7 pm</td>
+        <td>9 hrs</td>
+        <td>1 hrs</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>11-7-2021</td>
+        <td>10 AM</td>
+        <td>7 pm</td>
+        <td>9 hrs</td>
+        <td>1 hrs</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>11-7-2021</td>
+        <td>10 AM</td>
+        <td>7 pm</td>
+        <td>9 hrs</td>
+        <td>1 hrs</td>
+        <td>0</td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+</div>
+
+
+{% endblock %}
+
+
+
+{% block scripts %}
+  {{ block.super }}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'adminlite/adminlite.html' %}
+{% load static %}
+{% block styles %}
+  {{ block.super }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<main>
+{% load static %}
+    <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+            <div class="col">
+                <div class="card h-100 shadow-sm"> <img src="https://www.dripcoding.com/wp-content/uploads/2021/06/what-is-flutter-1280.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Advance Flutter Course</h5>
+
+                        <br>
+                        <div class="text-center -4my-4"> <a href="#" class="btn btn-warning">Apply</a> </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+  {{ block.super }}
+{% endblock %}
