@@ -1,10 +1,15 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 
 def Attendance(request): 
-   return render(request, 'Attendance.html') 
+   attend = attendance.objects.all()
+   context ={
+    "Attend": attend
+    } 
+   return render(request, 'Attendance.html', context) 
 
 def view_Attendance(request): 
    return render(request, 'view_attendance.html') 

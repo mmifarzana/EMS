@@ -1,8 +1,17 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from .models import *
+from .forms import *
 
 # Create your views here.
+
+def add_traning(request): 
+   traning_form = TraningForm()
+   if request.method == "POST":
+         traning_form = TraningForm(request.POST,  request.FILES)
+         if traning_form.is_valid():
+               traning_form.save() 
+   return render(request, 'add_traning.html',{"T_form": traning_form})
 
 def view_traning(request): 
    traningCourse = traning.objects.all()

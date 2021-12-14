@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class emplyee(models.Model):
+class employee(models.Model):
         name = models.CharField(max_length=100)
         img = models.ImageField(upload_to='images')
         Employee_id  = models.CharField(max_length=100)

@@ -4,5 +4,5 @@ from .models import *
 class TraningForm(forms.ModelForm):
   
     class Meta:
-        model = Traning
+        model = traning
         fields = "__all__"

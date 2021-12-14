@@ -1,8 +1,8 @@
 from django import forms
 from .models import *
   
-class EmpolyeeForm(forms.ModelForm):
+class EmployeeForm(forms.ModelForm):
   
     class Meta:
-        model = Empolyee
+        model = employee
         fields = "__all__"

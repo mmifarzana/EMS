@@ -8,7 +8,7 @@ urlpatterns = [
     path('', all_employee, name='all_employee'),
     path('Profile/', Profile, name='profile'),
     path('employee_report', employee_report, name='employee_report'),
-   # path('Add_employee/', Add_employee, name='Add_employee'),
+    path('Add_employee/', Add_employee, name='Add_employee'),
     
   
   

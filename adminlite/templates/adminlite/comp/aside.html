@@ -46,27 +46,24 @@
             </a>
           </li>
            <!--profile-->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link ">
-              <i class="fas fa-id-badge"></i>
-              <p>
-                Profile
-                
-              </p>
-            </a>
-          </li>
+       
+              <li class="nav-item">
+                <a href="{% url 'profile' %}" class="nav-link">
+                  <i class="fas fa-id-badge"></i>
+                  <p>Profile</p>
+                </a>
+              </li>
+           
           <!--Attendance-->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link ">
+         
+          <li class="nav-item">
+            <a href="{% url 'Attendance' %}" class="nav-link">
               <i class="fas fa-address-card"></i>
-              <p>
-                Attendance
-                
-              </p>
+              <p>Attendance</p>
             </a>
           </li>
           <!--leave-->
-          <li class="nav-item menu-open">
+          <li class="nav-item ">
             <a href="#" class="nav-link ">
               <i class="fas fa-sign-out-alt"></i>
               <p>
@@ -76,17 +73,30 @@
             </a>
           </li>
           <!--traning-->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link ">
+          <li class="nav-item">
+            <a href="{% url 'view_traning' %}" class="nav-link">
               <i class="fas fa-laptop-medical"></i>
-              <p>
-                Traning
-                
-              </p>
+              <p>Traning</p>
             </a>
           </li>
+          
+           <!--Salary-->
+              <li class="nav-item">
+                <a href="{% url 'view_salary' %}" class="nav-link">
+                  <i class="fas fa-money-bill-alt"></i>
+                  <p>Salary</p>
+                </a>
+              </li>
+          
+              <li class="nav-item">
+                <a href="{% url 'all_employee' %}" class="nav-link">
+                  <i class="fas fa-user"></i>
+                  <p>Employees</p>
+                </a>
+              </li>
+     
           <!--reports-->
-          <li class="nav-item menu-open">
+          <li class="nav-item ">
             <a href="#" class="nav-link ">
               <i class="fas fa-flag"></i>
               <p>
@@ -100,7 +110,7 @@
             <a href="#" class="nav-link">
               <i class="fas fa-user"></i>
               <p>
-                Employee
+                All User
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -111,84 +121,34 @@
                   <p>All_Employee</p>
                 </a>
               </li>
+             
               <li class="nav-item">
-                <a href="{% url 'profile' %}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Profile</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/read-mail.html" class="nav-link">
+                <a href="{% url 'Add_employee' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add_employee</p>
                 </a>
               </li>
-              
-            </ul>
-          </li>
-          <!--Attendance-->
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-clipboard"></i>
-              <p>
-                Attendance
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
+              <li class="nav-item">
                 <a href="{% url 'Attendance' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Attendance</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/mailbox/mailbox.html" class="nav-link">
+                <a href="{% url 'Attendance' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Add_Attendance</p>
+                  <p>All Leaves</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'view_Attendance' %}" class="nav-link">
+                <a href="{% url 'Attendance' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>view_Attendance</p>
+                  <p>Applying Traning</p>
                 </a>
               </li>
-              
-            </ul>
-          </li>  
-          <!--Leave-->
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-sign-out-alt"></i>
-              <p>
-                Leave
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/mailbox/mailbox.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Add_leave</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{% url 'admin_view_leave' %}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Admin_view</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{% url 'leave_employee' %}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>view_leave</p>
-                </a>
-              </li>
-              
             </ul>
           </li>
+    
           <!--Traning-->
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -200,7 +160,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/mailbox/mailbox.html" class="nav-link">
+                <a href="{% url 'add_traning' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add_Traning</p>
                 </a>
@@ -235,6 +195,43 @@
                 <a href="{% url 'view_salary' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>view_Salary</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          <!--Job-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-money-bill-alt"></i>
+              <p>
+                JOBS
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/mailbox/mailbox.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add_Circular</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'view_salary' %}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>view_Circular</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/mailbox/mailbox.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add_Participant</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'view_salary' %}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>view_Participant</p>
                 </a>
               </li>
               
