@@ -4,5 +4,5 @@ from .models import *
 class ParollForm(forms.ModelForm):
   
     class Meta:
-        model = Paroll
+        model = paroll
         fields = "__all__"

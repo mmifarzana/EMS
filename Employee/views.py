@@ -19,8 +19,15 @@ def all_employee(request):
    }
    return render(request, 'all_employee.html', context)
 
-def Profile(request): 
-   return render(request, 'profile.html')
+
+def Profile(request, id):   
+   queryset1 = get_object_or_404(employee, pk=id)
+   
+   context = {
+         "single": queryset1,
+      }
+   return render(request, 'profile.html', context)
+
 
 def employee_report(request): 
    return render(request, 'employee_report.html')
