@@ -9,6 +9,7 @@ urlpatterns = [
     path('Add_salary/', Add_salary, name='Add_salary'), 
     #path('admin_view_leave/', admin_view_leave, name='admin_view_leave'),
     path('salary_report/', salary_report, name='salary_report'),
+     path('employee_salary/', employee_salary, name='employee_salary'),
     
   
   

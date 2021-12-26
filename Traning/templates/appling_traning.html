@@ -11,29 +11,28 @@
 
   <div class="card m-3 p-2">
 
-   <h3>Attendance</h3>
+   <h3>Applying Traning</h3>
 
    <table class="table table-hover text-nowrap">
     <thead>
       <tr>
-        <th>#</th>
-        <th>Date</th>
-        <th>Punce In</th>
-        <th>Punch Out</th>
-        <th>Production</th>
-        <th>Break</th>
+        <th>Name</th>
+        <th>Possition</th>
+        <th>Course_name</th>
+        <th>Applying_date</th>
+        <th>Status</th>
         
       </tr>
     </thead>
     <tbody>
-      {% for obj in A_Attend %}
+      {% for obj in a_Traning %}
       <tr>
-        <td>{{ obj.id }}</td>
-        <td>{{ obj.date }}</td>
-        <td>{{ obj.punch_in}}</td>
-        <td>{{obj.punch_out}}</td>
-        <td>{{obj.production}}</td>
-        <td>{{obj.time_of_break}}</td>
+        <td>{{ obj.Name }}</td>
+        <td>{{ obj.Possition }}</td>
+        <td>{{ obj.Course_name}}</td>
+        <td>{{obj.Applying_date}}</td>
+        <td>{{obj.Status}}</td>
+        
         
       </tr>
       {% endfor %}

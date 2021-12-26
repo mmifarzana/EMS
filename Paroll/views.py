@@ -20,6 +20,13 @@ def view_salary(request):
     }
    return render(request, 'view_salary.html', context)
 
+def employee_salary(request): 
+   salaryCourse1 = paroll.objects.all()
+   context ={
+    "e_Paroll":  salaryCourse1
+    }
+   return render(request, 'employee_selary.html', context)
+
 
 def salary_report(request): 
    return render(request, 'salary_report.html') 

@@ -1,5 +1,6 @@
 from django.http.response import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.core.exceptions import ObjectDoesNotExist
 from .models import *
 from .forms import *
 
@@ -18,18 +19,19 @@ def all_employee(request):
     "All_employee": Employee,
    }
    return render(request, 'all_employee.html', context)
-
-
+      
+        
 def Profile(request, id):   
-   queryset1 = get_object_or_404(employee, pk=id)
-   
-   context = {
-         "single": queryset1,
-      }
-   return render(request, 'profile.html', context)
+   try:
+      profile = employee.objects.get(pk=id)
+   except ObjectDoesNotExist as DoesNotExist:
+      profile = []
+      return render(request, 'profile.html', {"Profile":profile})
 
 
+     
 def employee_report(request): 
-   return render(request, 'employee_report.html')
+    return render(request, 'employee_report.html')
+
 
 

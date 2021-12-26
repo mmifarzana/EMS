@@ -19,6 +19,13 @@ def view_traning(request):
     "Traning": traningCourse
     }
    return render(request, 'view_traning.html', context)
+
+def appling_traning(request): 
+   traningCourse1 = Applying_traning.objects.all()
+   context ={
+    "a_Traning": traningCourse1
+    }
+   return render(request, 'appling_traning.html', context)
    
 
 def traning_report(request): 

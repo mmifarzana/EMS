@@ -6,73 +6,155 @@
 {% endblock %}
 
 {% block content %}
+<div class="">
+
+     <div class="row justify-content-end">
+
+           <a href="{% url 'add_leave' %}" class="btn btn-info mt-2 mx-5"> <i class="fas fa-plus-circle"></i> Add New Leave </a>
+
+    </div>
+
+   <div class="px-5 pt-5 ">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-12">
+        <div class="info-box bg-info">
+          
+
+          <div class="info-box-content">
+            <span class="info-box-text text-center">Annual Leave</span>
+            <span class="info-box-number text-center">12</span>
+
+           
+          </div>
+          <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+      </div>
+      <!-- /.col -->
+      <div class="col-md-3 col-sm-6 col-12">
+        <div class="info-box bg-success">
+          
+
+          <div class="info-box-content">
+            <span class="info-box-text text-center">Medical Leave</span>
+            <span class="info-box-number text-center">3</span>
+
+            
+          </div>
+          <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+      </div>
+      <!-- /.col -->
+      <div class="col-md-3 col-sm-6 col-12">
+        <div class="info-box ">
+          
+
+          <div class="info-box-content">
+            <span class="info-box-text text-center ">Other Leave</span>
+            <span class="info-box-number text-center">4</span>
+
+            
+          </div>
+          <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+      </div>
+      <!-- /.col -->
+      <div class="col-md-3 col-sm-6 col-12">
+        <div class="info-box bg-danger">
+          
+          <div class="info-box-content">
+            <span class="info-box-text text-center">Remaining Leave</span>
+            <span class="info-box-number text-center">5</span>
+
+          </div>
+          <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+      </div>
+      <!-- /.col -->
+    </div>
+   </div>
  
-<div class="p-5">
+    <div class="p-5">
 
-  <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Fixed Header Table</h3>
+      <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Total Leave</h3>
 
-                <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                    <div class="card-tools">
+                      <div class="input-group input-group-sm" style="width: 150px;">
+                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
-                    <div class="input-group-append">
-                      <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
-                      </button>
+                        <div class="input-group-append">
+                          <button type="submit" class="btn btn-default">
+                            <i class="fas fa-search"></i>
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  <!-- /.card-header -->
+                  <div class="card-body table-responsive p-0" style="height: 300px;">
+                    <table class="table table-head-fixed text-nowrap">
+                      <thead>
+                        <tr>
+                          <th>Date</th>
+                          <th>Name</th>
+                          <th>Possition</th>
+                          <th>Leave_Type</th>
+                          <th>Form</th>
+                          <th>To</th>
+                          <th>Number_of_days</th>
+                          <th>Leave_reason</th>
+                          <th>Location_on_leave</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        {% for obj in leave_e %}
+                        <tr>
+                          <td>{{obj.date}}</td>
+                          <td>{{obj.name}}</td>
+                          <td>{{obj.possition}}</td>
+                          <td>{{obj.leave_type}}</td>
+                          <td>{{obj.form}}</td>
+                          <td>{{obj.to}}</td>
+                          <td>{{obj.number_of_days}}</td>
+                          <td>{{obj.leave_reason}}</td>
+                          <td>{{obj.location_on_leave}}</td>
+                          <td>{{obj.leave_status}}</td>
+                          
+                          <td class="d-flex">
+                            
+                                <a href="#" class="btn btn-sm btn-info mr-1">Edit</a>
+                                <form method="post" action="">
+                                    <button type="submit" class="btn btn-sm btn-danger">
+                                      Delete
+                                  </button>
+                                </form>
+                              
+                            </td>
+                        </tr>
+                        
+                        {% endfor %}
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.card-body -->
                 </div>
+                <!-- /.card -->
               </div>
-              <!-- /.card-header -->
-              <div class="card-body table-responsive p-0" style="height: 300px;">
-                <table class="table table-head-fixed text-nowrap">
-                  <thead>
-                    <tr>
-                      <th>Date</th>
-                      <th>Name</th>
-                      <th>Possition</th>
-                      <th>Leave_Type</th>
-                      <th>Form</th>
-                      <th>To</th>
-                      <th>Number_of_days</th>
-                      <th>Leave_reason</th>
-                      <th>Address</th>
-                      <th>Location_on_leave</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+      </div>
+    </div>
 
-                    {% for obj in Leave %}
-                    <tr>
-                      <td>{{obj.date}}</td>
-                      <td>{{obj.name}}</td>
-                      <td>{{obj.possition}}</td>
-                      <td>{{obj.leave_type}}</td>
-                      <td>{{obj.form}}</td>
-                      <td>{{obj.to}}</td>
-                      <td>{{obj.number_of_days}}</td>
-                      <td>{{obj.leave_reason}}</td>
-                      <td>{{obj.address}}</td>
-                      <td>{{obj.location_on_leave}}</td>
-                      <td>{{obj.action}}</td>
-                    </tr>
-                    {% endfor %}
-                    
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-  </div>
 </div>
-
 
 {% endblock %}
 

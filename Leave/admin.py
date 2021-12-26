@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import leave
+from .models import *
 
-admin.site.register(leave)
+admin.site.register(Leave)
 # Register your models here.

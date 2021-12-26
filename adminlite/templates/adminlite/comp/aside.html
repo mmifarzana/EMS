@@ -48,7 +48,7 @@
            <!--profile-->
        
               <li class="nav-item">
-                <a href="{% url 'profile' %}" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="fas fa-id-badge"></i>
                   <p>Profile</p>
                 </a>
@@ -64,7 +64,7 @@
           </li>
           <!--leave-->
           <li class="nav-item ">
-            <a href="#" class="nav-link ">
+            <a href="{% url 'leave_employee' %}"           class="nav-link ">
               <i class="fas fa-sign-out-alt"></i>
               <p>
                 Leaves
@@ -82,7 +82,7 @@
           
            <!--Salary-->
               <li class="nav-item">
-                <a href="{% url 'view_salary' %}" class="nav-link">
+                <a href="{% url 'employee_salary' %}" class="nav-link">
                   <i class="fas fa-money-bill-alt"></i>
                   <p>Salary</p>
                 </a>
@@ -129,19 +129,19 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'Attendance' %}" class="nav-link">
+                <a href="{% url 'view_Attendance' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Attendance</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'Attendance' %}" class="nav-link">
+                <a href="{% url 'admin_view_leave' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>All Leaves</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'Attendance' %}" class="nav-link">
+                <a href="{% url 'appling_traning' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Applying Traning</p>
                 </a>
@@ -237,6 +237,7 @@
               
             </ul>
           </li>
+          
            <!--Report-->
           <li class="nav-item">
             <a href="#" class="nav-link">
