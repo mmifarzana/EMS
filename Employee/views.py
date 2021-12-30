@@ -1,7 +1,7 @@
 from django.http.response import HttpResponse
-from django.shortcuts import render, redirect
-from django.core.exceptions import ObjectDoesNotExist
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
+from django.core.exceptions import ObjectDoesNotExist
 from .forms import *
 
 # Create your views here.
@@ -25,8 +25,9 @@ def Profile(request, id):
    try:
       profile = employee.objects.get(pk=id)
    except ObjectDoesNotExist as DoesNotExist:
-      profile = []
-      return render(request, 'profile.html', {"Profile":profile})
+      profile = None
+   
+   return render(request, 'profile.html', {"Pro":profile})
 
 
      

@@ -1,0 +1,105 @@
+{% extends 'adminlite/adminlite.html' %}
+{% load static %}
+{% block styles %}
+  {{ block.super }}
+
+{% endblock %}
+
+{% block content %}
+<div class="">
+
+     <div class="row justify-content-end">
+
+           <a href="{% url 'add_circular' %}" class="btn btn-info mt-2 mx-5"> <i class="fas fa-plus-circle"></i> Add New Circular </a>
+
+    </div>
+
+  
+ 
+    <div class="p-5">
+
+      <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Total circular</h3>
+
+                    <div class="card-tools">
+                      <div class="input-group input-group-sm" style="width: 150px;">
+                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                        <div class="input-group-append">
+                          <button type="submit" class="btn btn-default">
+                            <i class="fas fa-search"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body table-responsive p-0" style="height: 300px;">
+                    <table class="table table-head-fixed text-nowrap">
+                      <thead>
+                        <tr>
+                          <th>Circular_No</th>
+                          <th>Date</th>
+                          <th>Company_name</th>
+                          <th>Job_title</th>
+                          <th>Field</th>
+                          <th>Job_type</th>
+                          <th>Requirement</th>
+                          <th>Exprience</th>
+                          <th>Email</th>
+                          <th>Last_date_apply</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        {% for obj in Circular_add %}
+                        <tr>
+                          <td>{{ obj.circular_No }}</td>
+                          <td>{{ obj.date }}</td>
+                          <td>{{ obj.company_name }}</td>
+                          <td>{{obj.job_title}}</td>
+                          <td>{{obj.field}}</td>
+                          <td>{{obj.job_type}}</td>
+                          <td>{{obj.requirement}}</td>
+                          <td>{{obj.exprience}}</td>
+                          <td>{{obj.email}}</td>
+                          <td>{{obj.last_date_apply}}</td>
+                          <td>{{obj.action}}</td>
+                          
+                          <td class="d-flex">
+                            
+                                <a href="#" class="btn btn-sm btn-info mr-1">Edit</a>
+                                <form method="post" action="">
+                                    <button type="submit" class="btn btn-sm btn-danger">
+                                      Delete
+                                  </button>
+                                </form>
+                              
+                            </td>
+                        </tr>
+                        
+                        {% endfor %}
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+      </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+  {{ block.super }}
+{% endblock %}

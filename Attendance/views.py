@@ -16,7 +16,7 @@ def view_Attendance(request):
    context ={
     "A_Attend": attend1
     } 
-   return render(request, 'view_attendance.html', context) 
+   return render(request, 'admin_attendance_view.html', context) 
 
 def Attendance_report(request): 
    return render(request, 'attendance_report.html')

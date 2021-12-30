@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'Traning',
     'Report',
     'Paroll',
-    'crispy_forms'
+    'Job',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
