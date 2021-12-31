@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'Traning',
     'Report',
     'Paroll',
-    'Job',
+    'JOBs',
     'crispy_forms',
 ]
 

@@ -1,0 +1,38 @@
+ {% extends 'adminlite/adminlite.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+        <div class=" p-4">
+
+            <div class="row justify-content-end">
+                <a href="{% url 'Jobs' %}" class="btn btn-info px-4 mr-5 mb-4"></i>Return</a>
+            </div>
+            <div class="col-md-10 mx-auto">
+                    <div class="card card-info">
+                        <div class="card-header">
+                        <h3 class="card-title">Add participent</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        
+                            <form method="post"> {% csrf_token %}
+                                <div class="jumbotron">
+                                {{ P_form|crispy }}
+                                    <button type="submit" class="btn btn-sm btn-info">Submit</button>
+                                </div>
+                            </form>
+                    
+                    </div>
+             </div>
+         </div>
+       
+    
+       
+
+ </div>
+
+ {% endblock%}

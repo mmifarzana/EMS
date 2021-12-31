@@ -25,7 +25,7 @@ urlpatterns = [
      path('leave/', include('Leave.urls')),
      path('Paroll/', include('Paroll.urls')),
      path('Traning/', include('Traning.urls')),
-     path('Job/', include('Job.urls')),
+     path('Job/', include('JOBs.urls')),
      path('admin/', admin.site.urls),
      
 ]

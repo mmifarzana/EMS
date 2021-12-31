@@ -1,0 +1,73 @@
+ {% extends 'adminlite/adminlite.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+ <div class=" p-5">
+   <div class="row justify-content-end">
+        <a href="{% url 'participent' %}" class="btn btn-info mt-2 mb-1 mr-3"> <i class="fas fa-plus-circle"></i> Add Participent </a>
+   </div>  
+     <h4 class=" mt-3">All Participent</h4>
+    <div class="card">
+        
+          <!-- /.card-header -->
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table m-0">
+                <thead class="bg-info">
+                    <tr>
+                    <th>No</th>
+                    <th>Full_name</th>
+                    <th>Job_title</th>
+                    <th>Job_type</th>
+                    <th>Field</th>
+                    <th>Related_exprience</th>
+                    <th>job_reason</th>
+                    <th>Email</th>
+                    <th>phone_no</th>
+                    <th>Image</th>
+                    <th>CV</th>
+                    <th>Submission_date</th>
+                    <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for obj in Pr_form %}
+                <tr> 
+                  <td>{{ obj.circular_No }}</td>
+                  <td>{{ obj.full_name }}</td>
+                  <td>{{ obj.job_title }}</td>
+                  <td>{{ obj.job_type }}</td>
+                  <td>{{ obj.field }}</td>
+                  <td>{{ obj.related_exprience }}</td>
+                  <td>{{ obj.job_reason }}</td>
+                  <td>{{ obj.email }}</td>
+                  <td>{{ obj.phone_no }}</td>
+                  <td>{{ obj.image }}</td>
+                  <td>{{ obj.cv }}</td>
+                  <td>{{ obj.submission_date }}</td>
+                  <td>{{ obj.action }}</td>
+                </tr>
+                {% endfor %}
+              
+                </tbody>
+              </table>
+            </div>
+            <!-- /.table-responsive -->
+          </div>
+          <!-- /.card-body -->
+          <div class="card-footer clearfix">
+            
+            <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All participent</a>
+          </div>
+          <!-- /.card-footer -->
+ </div>
+
+
+
+
+</div>
+
+ {% endblock%}

@@ -1,0 +1,42 @@
+{% extends 'adminlite/adminlite.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    
+        <section class="p-5">
+            <div class="">
+                <div class="row ">
+                    <div class="d-block mx-auto col-lg-10 col-md-12 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                 <h2 class="font-weight-bold text-center">Job Circular</h2>
+                                <a href="#" class="text-dark"><h3 class="">Job Title: </strong>{{ C.job_title }}</h3></a>
+                                <p><strong>Company Name: </strong> {{ C.company_name }}</p>
+                                <p><strong>Post date: </strong> {{ C.date }}</p>
+                                <p><strong>Field Name: </strong> {{ C.field }}</p>
+                                <p><strong>Job Type: </strong> {{ C.job_type }}</p>
+                                <p><strong>Requirement: </strong> {{ C.requirement }}</p>
+                                <p><strong>Exprience: </strong> {{ C.exprience }}</p>
+                                <p><strong>Email: </strong> {{ C.email }}</p>
+                                <p><strong>Last Date Of Apply: </strong> {{ C.last_date_apply }}</p>
+                                <p><a href="{% url 'participent' %}"> Click Here</a> to apply or send your CV</p>
+                                 
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+
+
+ 
+
+
+{% endblock %}
+
+
+
